@@ -16,7 +16,7 @@ cmake .. && make -j4
 ./mqtt_unit_tests
 ```
 
-# The library uses only the following STL containers:
+# The following classes are used from STL
 
 std::vector, std::string, std::optional, std::shared_ptr, std::unique_ptr
 
