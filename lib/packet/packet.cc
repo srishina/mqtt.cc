@@ -7,6 +7,4 @@ namespace packet {
     uint32_t remainingLen = dec.read<uint32_t, true>();
     return {byte0, remainingLen};
   }
-  // ControlPacket::~ControlPacket() {}
-  // Properties::~Properties() {}
 } // namespace packet
