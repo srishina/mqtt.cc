@@ -20,14 +20,17 @@ set(LIB_CODEC_SOURCES
 )
 
 set(LIB_SOURCES 
-    lib/mqtt.cc    
-    lib/topic.cc        
+    lib/mqtt.cc
+    lib/stream.cc
+    lib/tcpstream.cc
+    lib/topic.cc
     lib/error.cc)
+
 set(LIB_INCLUDES
     include/mqtt/mqtt.h
     include/mqtt/noncopyable.h
     include/mqtt/error.h)
-add_library(mqttcpp STATIC ${LIB_CODEC_SOURCES} ${LIB_SOURCES} ${LIB_INCLUDES})
+add_library(mqttcpp STATIC ${LIB_CODEC_SOURCES}  ${LIB_SOURCES} ${LIB_INCLUDES})
 target_include_directories(mqttcpp INTERFACE include PRIVATE include)
 # target_include_directories(mqttcpp PRIVATE ${CMAKE_SOURCE_DIR})
 target_compile_options(mqttcpp PRIVATE -Wall -Wextra -Werror -Wshadow -Wdouble-promotion)
@@ -53,7 +56,8 @@ set(TEST_CODEC_SOURCES
     lib/packet/suback.test.cc
     lib/packet/unsubscribe.test.cc
     lib/packet/unsuback.test.cc
-    lib/packet/publishresponse.test.cc)
+    lib/packet/publishresponse.test.cc
+    lib/tcpstream.test.cc)
     
 # Make test executable
 set(TEST_SOURCES
