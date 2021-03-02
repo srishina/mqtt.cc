@@ -57,7 +57,8 @@ set(TEST_CODEC_SOURCES
     lib/packet/unsubscribe.test.cc
     lib/packet/unsuback.test.cc
     lib/packet/publishresponse.test.cc
-    lib/tcpstream.test.cc)
+    lib/tcpstream.test.cc
+    lib/syncqueue.test.cc)
     
 # Make test executable
 set(TEST_SOURCES
