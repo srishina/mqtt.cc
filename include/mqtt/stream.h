@@ -5,7 +5,7 @@
 namespace mqtt {
 
   // Stream represents a bi-directonal stream that the MQTT client uses.
-  // The implementation of the Connection is responsible for
+  // The implementation of the Stream is responsible for
   // initialization of the stream(tcp, ws etc...) with the broker.
   // WebsocketStream, TCPStream is provided as part of the library, other
   // streams can be written by the implementations
